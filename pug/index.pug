@@ -1,0 +1,53 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,700,900")
+		link(rel='stylesheet', href='css/fonts.css')
+		link(rel='stylesheet', href='css/style.css')
+		script(src="https://ctr-localhost.ru/vlad/jq.js")
+
+	body
+		.page
+			.header
+				img(src="img/logo.png", alt="")
+			section.app
+				article.app__choice.choice
+					h1.choice__lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.
+					.choice__inner
+						section.choice__group(data-option-type="hair")
+							p.choice__group-desc
+								span.choice__group-label hair color 
+								span.choice__group-current Brunette
+							ul.choice__group-options
+								li.choice__group-variant(data-variant-value="blonde", style="background-image: url(img/blonde.jpg)")
+								li.choice__group-variant(data-variant-value="red", style="background-image: url(img/brunette.jpg)").active
+								li.choice__group-variant(data-variant-value="brunette", style="background-image: url(img/red.jpg)")
+						section.choice__group(data-option-type="chest")
+							p.choice__group-desc
+								span.choice__group-label chest size 
+								span.choice__group-current M
+							ul.choice__group-options
+								li.choice__group-variant(data-variant-value="s") S
+								li.choice__group-variant(data-variant-value="m").active M
+								li.choice__group-variant(data-variant-value="l") L
+						section.choice__group(data-option-type="ass")
+							p.choice__group-desc
+								span.choice__group-label ass size 
+								span.choice__group-current L
+							ul.choice__group-options
+								li.choice__group-variant(data-variant-value="s") S
+								li.choice__group-variant(data-variant-value="m").active M
+								li.choice__group-variant(data-variant-value="l") L
+						.choice__preview
+							.choice__preview-current(style="background-image: url(img/red-m-m.png)")
+							.choice__preview-next(style="background-image: url(img/red-m-m.png)")
+					.choice__footer
+						button.choice__btn.js-search.btn #[span.btn__wrapper #[span Search]]
+				article.app__result
+		script(src="js/common.js")

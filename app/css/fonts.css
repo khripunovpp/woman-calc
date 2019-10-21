@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "FuturaNewBook";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FuturaNewBook-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaNewBook-Reg.woff") format("woff"), url("../fonts/FuturaNewBook-Reg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FuturaNewDemi";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FuturaNewDemi-Reg.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaNewDemi-Reg.woff") format("woff"), url("../fonts/FuturaNewDemi-Reg.ttf") format("truetype");
+}

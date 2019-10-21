@@ -1,0 +1,250 @@
+@import "bourbon"
+@import "icon.sass"
+@import "mixins"
+
+$color: #f4c409
+$font-book: 'FuturaNewBook', sans-serif
+$font-demi: 'FuturaNewDemi', sans-serif
+
+html
+	box-sizing: border-box
+	min-height: 1px
+
+*,
+*::after,
+*::before
+	box-sizing: inherit
+	outline: none
+
+@include placeholder()
+  color: #eee
+
+body
+	margin: 0	
+	overflow-x: hidden
+	font-family: $font-book
+	line-height: 1.4
+	font-size: 14px
+	background-color: #15070f
+	text-size-adjust: 100%
+	-webkit-tap-highlight-color: transparent
+	background-image: url(../img/bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-content: center
+	min-height: 1px
+	height: 100vh
+
+img
+	max-width: 100%	
+	border: none	
+	outline: none	
+
+a
+	border: none	
+	outline: none	
+
+ul
+	list-style-type: none	
+	margin: 0	
+	padding: 0
+
+select::-ms-expand
+	display: none
+
+select
+	appearance: none
+
+button,
+input,
+textarea,
+select
+	font-family: $font-demi
+
+button
+	cursor: pointer
+
+%container
+	width: 100%
+	max-width: 970px	
+	padding: 0 15px
+	margin: 0 auto
+
+%grid
+	display: table
+	width: 100%
+	table-layout: fixed
+
+%part
+	display: table-cell
+	vertical-align: top
+
+.container
+	@extend %container
+
+.page
+	background-color: #15070f
+	max-width: 480px
+	margin: 0 auto
+	min-height: 1px
+
+.header
+	padding: 15px
+	text-align: center
+	img
+		max-width: 150px
+
+.choice
+	&__lead
+		font-size: 18px
+		line-height: 20px
+		color: #fff
+		text-align: center
+		margin: 0 0 20px
+		font-weight: 400
+		padding: 0 15px
+	&__inner
+		position: relative
+	&__group
+		background-image: linear-gradient(to bottom, #652147, transparent)
+		position: relative
+		border-radius: 4px
+		padding: 10px 15px 20px 50%
+		&::after
+			content: ''
+			height: 2px
+			width: 100%
+			left: 0
+			bottom: 0
+			background-image: url(../img/dotted-line.png)
+			background-position: 50% 50%
+			position: absolute
+		&-desc
+			margin: 0
+			font-size: 16px
+			color: #fff
+			font-family: $font-demi
+			position: relative
+			z-index: 1
+		&-current
+			display: none
+		&-options
+			margin-top: 7px
+			font-size: 0
+			position: relative
+			z-index: 1
+		&-variant
+			width: 35px
+			height: 35px
+			display: inline-block
+			vertical-align: middle
+			border: 2px solid #aaaaaa
+			border-radius: 50%
+			overflow: hidden
+			text-align: center
+			line-height: 50px
+			background-color: #2b0e1e
+			background-size: cover
+			cursor: pointer
+			font-family: $font-demi
+			font-size: 16px
+			line-height: 31px
+			color: #fff
+			&.active
+				width: 50px
+				height: 50px
+				font-size: 24px
+				line-height: 46px
+			&:hover,
+			&.active
+				border-color: #ff9f31
+				box-shadow: 0 0 10px rgba(#ff9f31, .35)
+			&+&
+				margin-left: 10px
+	&__preview
+		position: absolute
+		height: 330px
+		width: 173px
+		bottom: 2px
+		right: 50%
+		margin-right: 15px
+		opacity: .99
+		&::after
+			content: ''
+			position: absolute
+			z-index: -1
+			top: 50%
+			left: 50%
+			width: 1px
+			height: 1px
+			box-shadow: 0 0 100px 100px #fff
+			opacity: .3
+			border-radius: 50%
+		&-next
+			display: none
+		&-current,
+		&-next
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-size: contain
+			background-position: bottom right
+			// background-repeat: no-repeat
+	&__footer
+		padding: 35px 15px
+		text-align: center
+
+.btn
+	background-image: linear-gradient(to right, #fa1691, #ff52b0)
+	line-height: 1
+	border: none
+	font-size: 21px
+	letter-spacing: 2.1px
+	color: #fff
+	text-transform: uppercase
+	padding: 5px
+	width: 100%
+	max-width: 230px
+	border-radius: 100px
+	box-shadow: 0 0 24px rgba(#fe41a8, .24), 0 8px 16px rgba(#f342c3, .12)
+	transition: all .2s
+	&__wrapper
+		display: block
+		background-image: linear-gradient(to left, #fa1691, #ff52b0)
+		padding: 14px 40px 6px
+		border-radius: 100px
+		&::before
+			content: ''
+			background-image: url(../img/search-icon.png)
+			width: 26px
+			height: 33px
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: -3px
+			margin-right: 15px
+	&:hover
+		box-shadow: 0 0 0 rgba(#fe41a8, .24), 0 0 0 rgba(#f342c3, .12)
+		
+
+
+
+
+
+
+
+
+
+
+
+//ALWAYS END
+@import "media"
