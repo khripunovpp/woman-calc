@@ -17,76 +17,78 @@
         <tr>
           <td class="page__inner">
             <div class="page__container">
-              <div class="header"><img src="img/logo.png" alt=""></div>
-              <section class="app">
-                <article class="app__choice choice">
-                  <h1 class="choice__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.</h1>
-                  <div class="choice__inner">
-                    <section class="choice__group" data-option-type="hair">
-                      <p class="choice__group-desc"><span class="choice__group-label">hair color </span><span class="choice__group-current">Brunette</span></p>
-                      <ul class="choice__group-options">
-                        <li class="choice__group-variant" data-variant-value="blonde" style="background-image: url(img/blonde.jpg)"></li>
-                        <li class="choice__group-variant active" data-variant-value="red" style="background-image: url(img/brunette.jpg)"></li>
-                        <li class="choice__group-variant" data-variant-value="brunette" style="background-image: url(img/red.jpg)"></li>
-                      </ul>
-                    </section>
-                    <section class="choice__group" data-option-type="chest">
-                      <p class="choice__group-desc"><span class="choice__group-label">chest size </span><span class="choice__group-current">M</span></p>
-                      <ul class="choice__group-options">
-                        <li class="choice__group-variant" data-variant-value="s">S</li>
-                        <li class="choice__group-variant active" data-variant-value="m">M</li>
-                        <li class="choice__group-variant" data-variant-value="l">L</li>
-                      </ul>
-                    </section>
-                    <section class="choice__group" data-option-type="ass">
-                      <p class="choice__group-desc"><span class="choice__group-label">ass size </span><span class="choice__group-current">L</span></p>
-                      <ul class="choice__group-options">
-                        <li class="choice__group-variant" data-variant-value="s">S</li>
-                        <li class="choice__group-variant active" data-variant-value="m">M</li>
-                        <li class="choice__group-variant" data-variant-value="l">L</li>
-                      </ul>
-                    </section>
-                    <div class="choice__preview">
-                      <div class="choice__preview-current" style="background-image: url(img/red-m-m.png)"></div>
-                      <div class="choice__preview-next" style="background-image: url(img/red-m-m.png)"></div>
+              <div class="page__app">
+                <div class="header"><img src="img/logo.png" alt=""></div>
+                <section class="app">
+                  <article class="app__choice choice">
+                    <h1 class="choice__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.</h1>
+                    <div class="choice__inner">
+                      <section class="choice__group" data-option-type="hair">
+                        <p class="choice__group-desc"><span class="choice__group-label">hair color </span><span class="choice__group-current">Brunette</span></p>
+                        <ul class="choice__group-options">
+                          <li class="choice__group-variant" data-variant-value="blonde" style="background-image: url(img/blonde.jpg)"></li>
+                          <li class="choice__group-variant active" data-variant-value="red" style="background-image: url(img/brunette.jpg)"></li>
+                          <li class="choice__group-variant" data-variant-value="brunette" style="background-image: url(img/red.jpg)"></li>
+                        </ul>
+                      </section>
+                      <section class="choice__group" data-option-type="chest">
+                        <p class="choice__group-desc"><span class="choice__group-label">chest size </span><span class="choice__group-current">M</span></p>
+                        <ul class="choice__group-options">
+                          <li class="choice__group-variant" data-variant-value="s">S</li>
+                          <li class="choice__group-variant active" data-variant-value="m">M</li>
+                          <li class="choice__group-variant" data-variant-value="l">L</li>
+                        </ul>
+                      </section>
+                      <section class="choice__group" data-option-type="ass">
+                        <p class="choice__group-desc"><span class="choice__group-label">ass size </span><span class="choice__group-current">L</span></p>
+                        <ul class="choice__group-options">
+                          <li class="choice__group-variant" data-variant-value="s">S</li>
+                          <li class="choice__group-variant active" data-variant-value="m">M</li>
+                          <li class="choice__group-variant" data-variant-value="l">L</li>
+                        </ul>
+                      </section>
+                      <div class="choice__preview">
+                        <div class="choice__preview-current" style="background-image: url(img/choice/red-m-m.png)"></div>
+                        <div class="choice__preview-next" style="background-image: url(img/choice/red-m-m.png)"></div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="choice__footer">
-                    <button class="choice__btn js-search btn"><span class="btn__wrapper"><span>Search</span></span></button>
-                  </div>
-                </article>
-                <article class="app__result">
-                  <div class="result">
-                    <header class="result__header">
-                      <ul class="result__choice">
-                        <li class="result__choice-item" data-option-type="hair" style="background-image: url(img/blonde.jpg)"></li>
-                        <li class="result__choice-item" data-option-type="chest">M</li>
-                        <li class="result__choice-item" data-option-type="ass">L</li>
-                      </ul>
-                      <p class="result__geo">What city are you in: <b class="js-geo">Loading...</b></p>
-                    </header>
-                    <section class="result__statistics statistics">
-                      <p class="statistics__status success"> <span class="statistics__status-signSearching">searching...</span> <span class="statistics__status-signSuccess">search completed!</span></p>
-                      <div class="statistics__list">
-                        <p class="statistics__item">Women from this city on site: <b>245</b></p>
-                        <p class="statistics__item">Suitable for parameters: <b>16</b></p>
-                        <p class="statistics__item">In the immediate vicinity: <b>3</b></p>
-                      </div>
-                      <div class="statistics__result">
-                        <p class="statistics__name">Gretta</p>
-                        <p class="statistics__distance">500 meters to your location...</p>
-                      </div>
-                      <div class="statistics__profile profile">
-                        <div class="profile__pics">
-                          <div class="profile__ava profile__ava--1"><img src="img/result/brunette-l-l.jpg" alt=""></div>
-                          <div class="profile__ava profile__ava--2"><img src="img/result/brunette-l-l.jpg" alt=""></div>
-                          <div class="profile__ava profile__ava--3"><img src="img/result/brunette-l-l.jpg" alt=""></div>
+                    <div class="choice__footer">
+                      <button class="choice__btn js-search btn"><span class="btn__wrapper"><span>Search</span></span></button>
+                    </div>
+                  </article>
+                  <article class="app__result">
+                    <div class="result">
+                      <header class="result__header">
+                        <ul class="result__choice">
+                          <li class="result__choice-item" data-option-type="hair" style="background-image: url(img/blonde.jpg)"></li>
+                          <li class="result__choice-item" data-option-type="chest">M</li>
+                          <li class="result__choice-item" data-option-type="ass">L</li>
+                        </ul>
+                        <p class="result__geo">What city are you in: <b class="js-geo">Loading...</b></p>
+                      </header>
+                      <section class="result__statistics statistics">
+                        <p class="statistics__status success"> <span class="statistics__status-signSearching">searching...</span> <span class="statistics__status-signSuccess">search completed!</span></p>
+                        <div class="statistics__list">
+                          <p class="statistics__item">Women from this city on site: <b>245</b></p>
+                          <p class="statistics__item">Suitable for parameters: <b>16</b></p>
+                          <p class="statistics__item">In the immediate vicinity: <b>3</b></p>
                         </div>
-                      </div><a class="statistics__btn js-search btn" href=""><span class="btn__wrapper">Watch the rest</span></a>
-                    </section>
-                  </div>
-                </article>
-              </section>
+                        <div class="statistics__result">
+                          <p class="statistics__name">Gretta</p>
+                          <p class="statistics__distance">500 meters to your location...</p>
+                        </div>
+                        <div class="statistics__profile profile">
+                          <div class="profile__pics">
+                            <div class="profile__ava profile__ava--1"><img src="img/result/brunette-l-l.jpg" alt=""></div>
+                            <div class="profile__ava profile__ava--2"><img src="img/result/brunette-l-l.jpg" alt=""></div>
+                            <div class="profile__ava profile__ava--3"><img src="img/result/brunette-l-l.jpg" alt=""></div>
+                          </div>
+                        </div><a class="statistics__btn js-search btn" href=""><span class="btn__wrapper">Watch the rest</span></a>
+                      </section>
+                    </div>
+                  </article>
+                </section>
+              </div>
             </div>
           </td>
         </tr>

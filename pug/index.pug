@@ -18,65 +18,66 @@ html
 				tr
 					td.page__inner
 						.page__container
-							.header
-								img(src="img/logo.png", alt="")
-							section.app
-								article.app__choice.choice
-									h1.choice__lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.
-									.choice__inner
-										section.choice__group(data-option-type="hair")
-											p.choice__group-desc
-												span.choice__group-label hair color 
-												span.choice__group-current Brunette
-											ul.choice__group-options
-												li.choice__group-variant(data-variant-value="blonde", style="background-image: url(img/blonde.jpg)")
-												li.choice__group-variant(data-variant-value="red", style="background-image: url(img/brunette.jpg)").active
-												li.choice__group-variant(data-variant-value="brunette", style="background-image: url(img/red.jpg)")
-										section.choice__group(data-option-type="chest")
-											p.choice__group-desc
-												span.choice__group-label chest size 
-												span.choice__group-current M
-											ul.choice__group-options
-												li.choice__group-variant(data-variant-value="s") S
-												li.choice__group-variant(data-variant-value="m").active M
-												li.choice__group-variant(data-variant-value="l") L
-										section.choice__group(data-option-type="ass")
-											p.choice__group-desc
-												span.choice__group-label ass size 
-												span.choice__group-current L
-											ul.choice__group-options
-												li.choice__group-variant(data-variant-value="s") S
-												li.choice__group-variant(data-variant-value="m").active M
-												li.choice__group-variant(data-variant-value="l") L
-										.choice__preview
-											.choice__preview-current(style="background-image: url(img/red-m-m.png)")
-											.choice__preview-next(style="background-image: url(img/red-m-m.png)")
-									.choice__footer
-										button.choice__btn.js-search.btn #[span.btn__wrapper #[span Search]]
-								article.app__result
-									.result
-										header.result__header
-											ul.result__choice
-												li.result__choice-item(data-option-type="hair", style="background-image: url(img/blonde.jpg)")
-												li.result__choice-item(data-option-type="chest") M
-												li.result__choice-item(data-option-type="ass") L
-											p.result__geo What city are you in: #[b.js-geo Loading...]
-										section.result__statistics.statistics
-											p.statistics__status.success  #[span.statistics__status-signSearching searching...] #[span.statistics__status-signSuccess search completed!]
-											.statistics__list
-												p.statistics__item Women from this city on site: #[b 245]
-												p.statistics__item Suitable for parameters: #[b 16]
-												p.statistics__item In the immediate vicinity: #[b 3]
-											.statistics__result
-												p.statistics__name Gretta
-												p.statistics__distance 500 meters to your location...
-											.statistics__profile.profile
-												.profile__pics
-													.profile__ava.profile__ava--1
-														img(src="img/result/brunette-l-l.jpg", alt="")
-													.profile__ava.profile__ava--2
-														img(src="img/result/brunette-l-l.jpg", alt="")
-													.profile__ava.profile__ava--3
-														img(src="img/result/brunette-l-l.jpg", alt="")
-											a.statistics__btn.js-search.btn(href="") #[span.btn__wrapper Watch the rest]
+							.page__app
+								.header
+									img(src="img/logo.png", alt="")
+								section.app
+									article.app__choice.choice
+										h1.choice__lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.
+										.choice__inner
+											section.choice__group(data-option-type="hair")
+												p.choice__group-desc
+													span.choice__group-label hair color 
+													span.choice__group-current Brunette
+												ul.choice__group-options
+													li.choice__group-variant(data-variant-value="blonde", style="background-image: url(img/blonde.jpg)")
+													li.choice__group-variant(data-variant-value="red", style="background-image: url(img/brunette.jpg)").active
+													li.choice__group-variant(data-variant-value="brunette", style="background-image: url(img/red.jpg)")
+											section.choice__group(data-option-type="chest")
+												p.choice__group-desc
+													span.choice__group-label chest size 
+													span.choice__group-current M
+												ul.choice__group-options
+													li.choice__group-variant(data-variant-value="s") S
+													li.choice__group-variant(data-variant-value="m").active M
+													li.choice__group-variant(data-variant-value="l") L
+											section.choice__group(data-option-type="ass")
+												p.choice__group-desc
+													span.choice__group-label ass size 
+													span.choice__group-current L
+												ul.choice__group-options
+													li.choice__group-variant(data-variant-value="s") S
+													li.choice__group-variant(data-variant-value="m").active M
+													li.choice__group-variant(data-variant-value="l") L
+											.choice__preview
+												.choice__preview-current(style="background-image: url(img/choice/red-m-m.png)")
+												.choice__preview-next(style="background-image: url(img/choice/red-m-m.png)")
+										.choice__footer
+											button.choice__btn.js-search.btn #[span.btn__wrapper #[span Search]]
+									article.app__result
+										.result
+											header.result__header
+												ul.result__choice
+													li.result__choice-item(data-option-type="hair", style="background-image: url(img/blonde.jpg)")
+													li.result__choice-item(data-option-type="chest") M
+													li.result__choice-item(data-option-type="ass") L
+												p.result__geo What city are you in: #[b.js-geo Loading...]
+											section.result__statistics.statistics
+												p.statistics__status.success  #[span.statistics__status-signSearching searching...] #[span.statistics__status-signSuccess search completed!]
+												.statistics__list
+													p.statistics__item Women from this city on site: #[b 245]
+													p.statistics__item Suitable for parameters: #[b 16]
+													p.statistics__item In the immediate vicinity: #[b 3]
+												.statistics__result
+													p.statistics__name Gretta
+													p.statistics__distance 500 meters to your location...
+												.statistics__profile.profile
+													.profile__pics
+														.profile__ava.profile__ava--1
+															img(src="img/result/brunette-l-l.jpg", alt="")
+														.profile__ava.profile__ava--2
+															img(src="img/result/brunette-l-l.jpg", alt="")
+														.profile__ava.profile__ava--3
+															img(src="img/result/brunette-l-l.jpg", alt="")
+												a.statistics__btn.js-search.btn(href="") #[span.btn__wrapper Watch the rest]
 		script(src="js/common.js")
