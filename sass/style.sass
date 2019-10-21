@@ -8,7 +8,8 @@ $font-demi: 'FuturaNewDemi', sans-serif
 
 html
 	box-sizing: border-box
-	min-height: 1px
+	min-height: 100%
+	height: 100%
 
 *,
 *::after,
@@ -39,8 +40,8 @@ body
 	flex-direction: column
 	justify-content: center
 	align-content: center
-	min-height: 1px
-	height: 100vh
+	min-height: 100%
+	height: 100%
 
 img
 	max-width: 100%	
@@ -90,10 +91,23 @@ button
 	@extend %container
 
 .page
-	background-color: #15070f
-	max-width: 480px
 	margin: 0 auto
-	min-height: 1px
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	overflow: auto
+	&__wrapper
+		height: 100%
+		width: 100%
+	&__inner
+		vertical-align: middle
+	&__container
+		max-width: 480px
+		display: block
+		margin: 0 auto
+		background-color: #15070f
 
 .header
 	padding: 15px
@@ -101,7 +115,12 @@ button
 	img
 		max-width: 150px
 
+.app
+	&__result
+		padding: 0 15px 15px
+
 .choice
+	display: none
 	&__lead
 		font-size: 18px
 		line-height: 20px
@@ -198,10 +217,19 @@ button
 			height: 100%
 			background-size: contain
 			background-position: bottom right
-			// background-repeat: no-repeat
+			background-repeat: no-repeat
 	&__footer
 		padding: 35px 15px
 		text-align: center
+	&__btn
+		.btn
+			max-width: 230px
+			&__wrapper
+				&::before
+					background-image: url(../img/search-icon.png)
+					width: 26px
+					height: 33px
+					top: -3px
 
 .btn
 	background-image: linear-gradient(to right, #fa1691, #ff52b0)
@@ -213,24 +241,23 @@ button
 	text-transform: uppercase
 	padding: 5px
 	width: 100%
-	max-width: 230px
 	border-radius: 100px
 	box-shadow: 0 0 24px rgba(#fe41a8, .24), 0 8px 16px rgba(#f342c3, .12)
 	transition: all .2s
+	display: inline-block
+	text-align: center
+	cursor: pointer
+	text-decoration: none
 	&__wrapper
 		display: block
 		background-image: linear-gradient(to left, #fa1691, #ff52b0)
-		padding: 14px 40px 6px
+		padding: 14px 20px 6px
 		border-radius: 100px
 		&::before
 			content: ''
-			background-image: url(../img/search-icon.png)
-			width: 26px
-			height: 33px
 			display: inline-block
 			vertical-align: middle
 			position: relative
-			top: -3px
 			margin-right: 15px
 	&:hover
 		box-shadow: 0 0 0 rgba(#fe41a8, .24), 0 0 0 rgba(#f342c3, .12)
@@ -238,11 +265,215 @@ button
 
 
 
+.result
+	background-color: #632045
+	border-radius: 4px
+	&__header
+		padding: 15px 10px
+		position: relative
+		&::after
+			content: ''
+			height: 2px
+			width: 100%
+			left: 0
+			bottom: 0
+			background-image: url(../img/dotted-line.png)
+			background-position: 50% 50%
+			position: absolute
+	&__choice
+		text-align: center
+		&-item
+			display: inline-block
+			vertical-align: middle
+			border: 2px solid #ff9f31
+			border-radius: 50%
+			text-align: center
+			line-height: 50px
+			background-color: #2b0e1e
+			background-size: cover
+			cursor: pointer
+			font-family: $font-demi
+			color: #fff
+			width: 50px
+			height: 50px
+			font-size: 24px
+			line-height: 46px
+			box-shadow: 0 0 10px rgba(#ff9f31, .35)
+			position: relative
+			&+&
+				margin-left: 30px
+				&::before
+					width: 30px
+					height: 2px
+					background-image: url(../img/dotted-line.png)
+					background-position: 50% 50%
+					position: absolute
+					left: -34px
+					top: 50%
+					margin-top: -1px
+					content: ''
+	&__geo
+		font-size: 16px
+		text-align: center
+		color: #8F7B86
+		margin: 10px 0 0
+		b
+			font-size: 21px
+			font-family: $font-demi
+			font-weight: 400
+			color: #fff
+			margin: 0 5px
 
+.statistics
+	padding: 25px 10px
+	&__profile
+		margin-bottom: 25px
+	&__status
+		font-family: $font-demi
+		font-size: 24px
+		font-weight: 400
+		margin: 0
+		color: #fff
+		text-align: center
+		&-signSuccess
+			display: none
+		&::before
+			content: ''
+			width: 24px
+			height: 24px
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			background-image: url(../img/loading.gif)
+			background-size: contain
+			margin-right: 5px
+		&.success
+			color: #71fc1d
+			&::before
+				background-image: url(../img/check-icon.png)
+				top: -2px
+			.statistics__status
+				&-signSuccess
+					display: inline-block
+				&-signSearching
+					display: none
+	&__list
+		padding: 20px 0
+		border-bottom: 1px solid #ff9f31
+		margin-bottom: 15px
+	&__item
+		font-size: 16px
+		padding-right: 45px
+		position: relative
+		color: #fff
+		margin: 0
+		b
+			font-size: 18px
+			position: absolute
+			right: 0
+			top: 0
+			font-family: $font-demi
+			font-weight: 400
+		&+&
+			margin-top: 15px
+	&__result
+		margin-bottom: 15px
+		text-align: center
+	&__name
+		font-family: $font-demi
+		font-size: 24px
+		color: #fff
+		margin: 0
+	&__distance
+		font-size: 14px
+		margin: 5px 0 0
+		color: #fff
+		&::before
+			content: ''
+			background-image: url(../img/distance-icon.png)
+			width: 18px
+			height: 22px
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: -5px
+			margin-right: 15px
+	&__btn
+		font-size: 18px
+		.btn
+			&__wrapper
+				&::before
+					background-image: url(../img/chat-icon.png)
+					width: 32px
+					height: 32px
+					top: -3px
 
-
-
-
+.profile
+	width: 206px
+	margin-left: auto
+	margin-right: auto
+	font-size: 0
+	&__pics
+		position: relative
+		width: 206px
+		height: 262px
+	&__ava
+		width: 206px
+		height: 262px
+		overflow: hidden
+		border-radius: 15px
+		position: relative
+		box-shadow: 0 12px 24px rgba(#190714, .3)
+		transition: all .2s
+		transform-origin: left top
+		position: absolute
+		img
+			max-width: none
+		&::after
+			content: ''
+			position: absolute
+			z-index: 2
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 85px
+		&::before
+			z-index: 1
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #291a22
+			opacity: .5
+			content: ''
+		&--1
+			z-index: 3
+			&::after
+				background-image: linear-gradient(to bottom, transparent, #fe3da6)
+			&::before
+				display: none
+		&--2
+			z-index: 2
+			opacity: 0
+			&::after
+				background-image: linear-gradient(to bottom, transparent, #df881b)
+		&--3
+			z-index: 1
+			opacity: 0
+			&::after
+				background-image: linear-gradient(to bottom, transparent, #682179)
+	&.stop
+		.profile
+			&__ava
+				&--1
+					transform: scale(.9)
+				&--2
+					transform: scale(.85) translate(25px, 7px)
+					opacity: 1
+				&--3
+					transform: scale(.8) translate(50px, 15px)
+					opacity: 1
 
 
 
