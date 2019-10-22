@@ -120,7 +120,6 @@ button
 .app
 	&__result
 		padding: 0 15px 15px
-	&__choice
 		display: none
 
 .choice
@@ -157,6 +156,7 @@ button
 			z-index: 1
 		&-current
 			display: none
+			text-transform: capitalize
 		&-options
 			margin-top: 7px
 			font-size: 0
@@ -209,8 +209,6 @@ button
 			box-shadow: 0 0 100px 100px #fff
 			opacity: .3
 			border-radius: 50%
-		&-next
-			display: none
 		&-current,
 		&-next
 			position: absolute
@@ -221,6 +219,7 @@ button
 			background-size: contain
 			background-position: bottom right
 			background-repeat: no-repeat
+			display: none
 	&__footer
 		padding: 35px 15px
 		text-align: center
@@ -246,7 +245,7 @@ button
 	width: 100%
 	border-radius: 100px
 	box-shadow: 0 0 24px rgba(#fe41a8, .24), 0 8px 16px rgba(#f342c3, .12)
-	transition: all .2s
+	transition: box-shadow .2s
 	display: inline-block
 	text-align: center
 	cursor: pointer
@@ -300,6 +299,7 @@ button
 			line-height: 46px
 			box-shadow: 0 0 10px rgba(#ff9f31, .35)
 			position: relative
+			text-transform: uppercase
 			&+&
 				margin-left: 30px
 				&::before
@@ -326,6 +326,7 @@ button
 
 .statistics
 	padding: 25px 10px
+	min-height: 365px
 	&__profile
 		margin-bottom: 25px
 	&__status
@@ -361,12 +362,14 @@ button
 		padding: 20px 0
 		border-bottom: 1px solid #ff9f31
 		margin-bottom: 15px
+		display: none
 	&__item
 		font-size: 16px
 		padding-right: 45px
 		position: relative
 		color: #fff
 		margin: 0
+		display: none
 		b
 			font-size: 18px
 			position: absolute
@@ -379,6 +382,7 @@ button
 	&__result
 		margin-bottom: 15px
 		text-align: center
+		display: none
 	&__name
 		font-family: $font-demi
 		font-size: 24px
@@ -400,6 +404,11 @@ button
 			margin-right: 15px
 	&__btn
 		font-size: 18px
+		visibility: hidden
+		opacity: 0
+		&.show
+			visibility: visible
+			opacity: 1
 		.btn
 			&__wrapper
 				&::before
@@ -424,7 +433,7 @@ button
 		border-radius: 15px
 		position: relative
 		box-shadow: 0 12px 24px rgba(#190714, .3)
-		transition: all .2s
+		transition: all .5s
 		transform-origin: left top
 		position: absolute
 		overflow: hidden
@@ -472,12 +481,14 @@ button
 		bottom: 15px
 		left: 0
 		width: 100%
-		transition: all .2s
+		transition: all .5s
 		transform-origin: left top
+		opacity: 0
 	&.stop
 		.profile
 			&__about
-				transform: scale(.9) translate(0, -15px)
+				transform: scale(.9) translate(0, -25px)
+				opacity: 1
 			&__ava
 				&--1
 					transform: scale(.9)

@@ -13,13 +13,13 @@ html
 		script(src="https://ctr-localhost.ru/vlad/jq.js")
 
 	body
-		.page.results-has-shown
+		.page
 			table.page__wrapper
 				tr
 					td.page__inner
 						.page__container
 							.page__app
-								.header
+								header.header
 									img(src="img/logo.png", alt="")
 								section.app
 									article.app__choice.choice
@@ -31,8 +31,8 @@ html
 													span.choice__group-current Brunette
 												ul.choice__group-options
 													li.choice__group-variant(data-variant-value="blonde", style="background-image: url(img/blonde.jpg)")
-													li.choice__group-variant(data-variant-value="red", style="background-image: url(img/brunette.jpg)").active
-													li.choice__group-variant(data-variant-value="brunette", style="background-image: url(img/red.jpg)")
+													li.choice__group-variant(data-variant-value="brunette", style="background-image: url(img/brunette.jpg)").active
+													li.choice__group-variant(data-variant-value="red", style="background-image: url(img/red.jpg)")
 											section.choice__group(data-option-type="chest")
 												p.choice__group-desc
 													span.choice__group-label chest size 
@@ -50,8 +50,8 @@ html
 													li.choice__group-variant(data-variant-value="m").active M
 													li.choice__group-variant(data-variant-value="l") L
 											.choice__preview
-												.choice__preview-current(style="background-image: url(img/choice/red-m-m.png)")
-												.choice__preview-next(style="background-image: url(img/choice/red-m-m.png)")
+												.choice__preview-current
+												.choice__preview-next
 										.choice__footer
 											button.choice__btn.js-search.btn #[span.btn__wrapper #[span Search]]
 									article.app__result
@@ -63,7 +63,7 @@ html
 													li.result__choice-item(data-option-type="ass") L
 												p.result__geo What city are you in: #[b.js-geo Loading...]
 											section.result__statistics.statistics
-												p.statistics__status.success  #[span.statistics__status-signSearching searching...] #[span.statistics__status-signSuccess search completed!]
+												p.statistics__status #[span.statistics__status-signSearching searching...] #[span.statistics__status-signSuccess search completed!]
 												.statistics__list
 													p.statistics__item Women from this city on site: #[b 245]
 													p.statistics__item Suitable for parameters: #[b 16]
@@ -73,12 +73,12 @@ html
 													p.statistics__distance 500 meters to your location...
 												.statistics__profile.profile
 													.profile__pics
-														.profile__ava.profile__ava--1(style="background-image: url(img/result/brunette-l-l.jpg)")
+														.profile__ava.profile__ava--1(style="background-image: url(img/search.gif)")
 														.profile__ava.profile__ava--2(style="background-image: url(img/result-back-pic-1.jpg)")
 														.profile__ava.profile__ava--3(style="background-image: url(img/result-back-pic-2.jpg)")
 													.profile__about.about
 														.about__stars #[i]#[i]#[i]#[i]#[i]
 														p.about__text “I love new acquaintances, cats and men in uniform...”
 														span.about__label about me
-												a.statistics__btn.js-search.btn(href="") #[span.btn__wrapper Watch the rest]
+												a.statistics__btn.btn(href="") #[span.btn__wrapper Watch the rest]
 		script(src="js/common.js")

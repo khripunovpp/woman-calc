@@ -12,13 +12,13 @@
     <script src="https://ctr-localhost.ru/vlad/jq.js"></script>
   </head>
   <body>
-    <div class="page results-has-shown">
+    <div class="page">
       <table class="page__wrapper">
         <tr>
           <td class="page__inner">
             <div class="page__container">
               <div class="page__app">
-                <div class="header"><img src="img/logo.png" alt=""></div>
+                <header class="header"><img src="img/logo.png" alt=""></header>
                 <section class="app">
                   <article class="app__choice choice">
                     <h1 class="choice__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolore sed eaque odio enim blanditiis qui corporis repudiandae repellat, repellendus.</h1>
@@ -27,8 +27,8 @@
                         <p class="choice__group-desc"><span class="choice__group-label">hair color </span><span class="choice__group-current">Brunette</span></p>
                         <ul class="choice__group-options">
                           <li class="choice__group-variant" data-variant-value="blonde" style="background-image: url(img/blonde.jpg)"></li>
-                          <li class="choice__group-variant active" data-variant-value="red" style="background-image: url(img/brunette.jpg)"></li>
-                          <li class="choice__group-variant" data-variant-value="brunette" style="background-image: url(img/red.jpg)"></li>
+                          <li class="choice__group-variant active" data-variant-value="brunette" style="background-image: url(img/brunette.jpg)"></li>
+                          <li class="choice__group-variant" data-variant-value="red" style="background-image: url(img/red.jpg)"></li>
                         </ul>
                       </section>
                       <section class="choice__group" data-option-type="chest">
@@ -48,8 +48,8 @@
                         </ul>
                       </section>
                       <div class="choice__preview">
-                        <div class="choice__preview-current" style="background-image: url(img/choice/red-m-m.png)"></div>
-                        <div class="choice__preview-next" style="background-image: url(img/choice/red-m-m.png)"></div>
+                        <div class="choice__preview-current"></div>
+                        <div class="choice__preview-next"></div>
                       </div>
                     </div>
                     <div class="choice__footer">
@@ -67,7 +67,7 @@
                         <p class="result__geo">What city are you in: <b class="js-geo">Loading...</b></p>
                       </header>
                       <section class="result__statistics statistics">
-                        <p class="statistics__status success"> <span class="statistics__status-signSearching">searching...</span> <span class="statistics__status-signSuccess">search completed!</span></p>
+                        <p class="statistics__status"><span class="statistics__status-signSearching">searching...</span> <span class="statistics__status-signSuccess">search completed!</span></p>
                         <div class="statistics__list">
                           <p class="statistics__item">Women from this city on site: <b>245</b></p>
                           <p class="statistics__item">Suitable for parameters: <b>16</b></p>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="statistics__profile profile">
                           <div class="profile__pics">
-                            <div class="profile__ava profile__ava--1" style="background-image: url(img/result/brunette-l-l.jpg)"></div>
+                            <div class="profile__ava profile__ava--1" style="background-image: url(img/search.gif)"></div>
                             <div class="profile__ava profile__ava--2" style="background-image: url(img/result-back-pic-1.jpg)"></div>
                             <div class="profile__ava profile__ava--3" style="background-image: url(img/result-back-pic-2.jpg)"></div>
                           </div>
@@ -87,7 +87,7 @@
                             <div class="about__stars"><i></i><i></i><i></i><i></i><i></i></div>
                             <p class="about__text">“I love new acquaintances, cats and men in uniform...”</p><span class="about__label">about me</span>
                           </div>
-                        </div><a class="statistics__btn js-search btn" href=""><span class="btn__wrapper">Watch the rest</span></a>
+                        </div><a class="statistics__btn btn" href=""><span class="btn__wrapper">Watch the rest</span></a>
                       </section>
                     </div>
                   </article>
