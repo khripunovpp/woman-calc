@@ -551,22 +551,22 @@ button {
 }
 
 .profile {
-  width: 206px;
+  width: 230px;
   margin-left: auto;
   margin-right: auto;
   font-size: 0;
+  position: relative;
 }
 
 .profile__pics {
   position: relative;
-  width: 206px;
-  height: 262px;
+  width: 230px;
+  height: 290px;
 }
 
 .profile__ava {
-  width: 206px;
-  height: 262px;
-  overflow: hidden;
+  width: 230px;
+  height: 290px;
   border-radius: 15px;
   position: relative;
   -webkit-box-shadow: 0 12px 24px rgba(25, 7, 20, 0.3);
@@ -578,10 +578,9 @@ button {
   -ms-transform-origin: left top;
   transform-origin: left top;
   position: absolute;
-}
-
-.profile__ava img {
-  max-width: none;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .profile__ava::after {
@@ -592,6 +591,7 @@ button {
   left: 0;
   width: 100%;
   height: 85px;
+  border-radius: 0 0 15px 15px;
 }
 
 .profile__ava::before {
@@ -604,6 +604,7 @@ button {
   background-color: #291a22;
   opacity: .5;
   content: '';
+  border-radius: 15px;
 }
 
 .profile__ava--1 {
@@ -642,6 +643,26 @@ button {
   background-image: linear-gradient(to bottom, transparent, #682179);
 }
 
+.profile__about {
+  position: absolute;
+  z-index: 4;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.profile.stop .profile__about {
+  -webkit-transform: scale(0.9) translate(0, -15px);
+  -ms-transform: scale(0.9) translate(0, -15px);
+  transform: scale(0.9) translate(0, -15px);
+}
+
 .profile.stop .profile__ava--1 {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
@@ -660,6 +681,34 @@ button {
   -ms-transform: scale(0.8) translate(50px, 15px);
   transform: scale(0.8) translate(50px, 15px);
   opacity: 1;
+}
+
+.about {
+  text-align: center;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  max-width: 180px;
+  margin: 8px auto 0;
+}
+
+.about__stars i {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/star-icon.png);
+  width: 13px;
+  height: 12px;
+}
+
+.about__stars i + i {
+  margin-left: 4px;
+}
+
+.about__label {
+  display: none;
 }
 
 /* Mobile-first */
@@ -807,7 +856,7 @@ button {
   }
   .result__choice {
     padding: 20px 40px;
-    width: 48%;
+    width: 50%;
   }
   .result__geo {
     padding: 20px 40px 20px 0;
@@ -823,16 +872,18 @@ button {
     margin: 5px 0 0;
   }
   .statistics {
-    padding: 35px 35px 50px 48%;
+    padding: 35px 35px 50px 50%;
     position: relative;
   }
   .statistics__profile {
     position: absolute;
     top: 35px;
-    left: 55px;
+    left: 50px;
+    margin-bottom: 0;
   }
   .statistics__status {
-    font-size: 32px;
+    font-size: 30px;
+    text-align: left;
   }
   .statistics__list {
     padding: 25px 0;
@@ -848,9 +899,75 @@ button {
   }
   .statistics__result {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .statistics__distance {
     margin-top: 10px;
+  }
+  .profile__about {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 0;
+  }
+  .profile.stop .profile__about {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .about {
+    position: relative;
+    overflow: hidden;
+  }
+  .about__stars {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .about__stars::after, .about__stars::before {
+    content: '';
+    height: 2px;
+    background-color: #fe3da6;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+  }
+  .about__stars::after {
+    left: 100%;
+    margin-left: 5px;
+  }
+  .about__stars::before {
+    right: 100%;
+    margin-right: 5px;
+  }
+  .about__text {
+    max-width: none;
+    padding: 20px 30px 23px;
+    border: 2px solid #fe3da6;
+    border-top: none;
+    margin: 8px 0 10px;
+  }
+  .about__label {
+    position: absolute;
+    font-size: 14px;
+    background-color: #0c0c0c;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    color: #fff;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 5px;
+    line-height: 1;
+    padding: 5px 10px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }

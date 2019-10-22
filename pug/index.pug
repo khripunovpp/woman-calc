@@ -71,13 +71,14 @@ html
 												.statistics__result
 													p.statistics__name Gretta
 													p.statistics__distance 500 meters to your location...
-												.statistics__profile.profile.stop
+												.statistics__profile.profile
 													.profile__pics
-														.profile__ava.profile__ava--1
-															img(src="img/result/brunette-l-l.jpg", alt="")
-														.profile__ava.profile__ava--2
-															img(src="img/result-back-pic-1.jpg", alt="")
-														.profile__ava.profile__ava--3
-															img(src="img/result-back-pic-2.jpg", alt="")
+														.profile__ava.profile__ava--1(style="background-image: url(img/result/brunette-l-l.jpg)")
+														.profile__ava.profile__ava--2(style="background-image: url(img/result-back-pic-1.jpg)")
+														.profile__ava.profile__ava--3(style="background-image: url(img/result-back-pic-2.jpg)")
+													.profile__about.about
+														.about__stars #[i]#[i]#[i]#[i]#[i]
+														p.about__text “I love new acquaintances, cats and men in uniform...”
+														span.about__label about me
 												a.statistics__btn.js-search.btn(href="") #[span.btn__wrapper Watch the rest]
 		script(src="js/common.js")
