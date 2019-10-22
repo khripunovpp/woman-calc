@@ -5,7 +5,7 @@ var Util = {
         return rand;
     },
     scrollToEl: function(el, target) {
-        target.animate({ scrollTop: el.offset().top  }, 500);
+        target.animate({ scrollTop: el.offset().top }, 500);
     },
     trimString: function(string) {
         return string.split(' ').join('');
@@ -67,27 +67,32 @@ var App = {
     _cangeImage: function() {
         var _t = this;
 
-        _t['imageUrlChoice'] = "img/choice/" + _t.state['hair'] + "-" + _t.state['chest'] + "-" + _t.state['ass'] + ".png";
+        _t['imageUrlChoice'] = "img/choice/" + _t.state['hair'] + "-" + _t.state['breast'] + "-" + _t.state['ass'] + ".png";
         _t['imageUrlResult'] = "img/result/brunette-l-l.jpg";
 
         var previewCurrent = $('.choice__preview-current'),
             previewNext = $('.choice__preview-next');
 
         previewNext.css('background-image', 'url(' + _t.imageUrlChoice + ')');
-        previewNext.fadeIn(400, function() {
+        previewNext.fadeIn(150, function() {
             previewCurrent.css('background-image', 'url(' + _t.imageUrlChoice + ')');
-            previewCurrent.fadeIn(400, function() {
-                previewNext.fadeOut(400);
+            previewCurrent.fadeIn(150, function() {
+                previewNext.fadeOut(150);
             });
         });
     },
     _getGeo: function() {
-        $.get('http://ip-api.com/json/', function(data) {
-            $(document).trigger({
-                type: "geolocation",
-                city: data.city
-            })
-        })
+        $.ajax({
+            url: "https://geoip-db.com/jsonp",
+            jsonpCallback: "callback",
+            dataType: "jsonp",
+            success: function(location) {
+                $(document).trigger({
+                    type: "geolocation",
+                    city: location.city
+                })
+            }
+        });
     },
     _showResults: function() {
         var _t = this;
@@ -99,7 +104,7 @@ var App = {
         statItems.each(function(index, el) {
             var count = $(el).find('b').text();
 
-            endTimeOut = index * 500;
+            endTimeOut = index * 1000;
             setTimeout(function() {
                 $(el).fadeIn(200);
                 _t._animateValue($(el).find('b'), 0, count, 200)
@@ -108,12 +113,12 @@ var App = {
 
         setTimeout(function() {
             $('.statistics__result').fadeIn(400);
-            Util.scrollToEl($('.statistics__result'), $('.page'));
             $('.statistics__status').addClass('success');
             $('.statistics__btn').addClass('show');
             $('.profile__ava--1').css('background-image', 'url(' + _t.imageUrlResult + ')');
             $('.profile').addClass('stop');
-        }, endTimeOut + 400)
+            Util.scrollToEl($('.statistics__result'), $('.page'));
+        }, endTimeOut + 1000)
     },
     _animateValue: function(el, start, end, duration) {
         var range = end - start;
@@ -134,7 +139,7 @@ var App = {
 $(function() {
     App.init({
         'hair': 'red',
-        'chest': 'l',
-        'ass': 's'
+        'breast': 'm',
+        'ass': 'm'
     })
 });

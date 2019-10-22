@@ -2,10 +2,11 @@
 
 /* Mobile-first */
 @media only screen and (min-width : 992px)
+
 	body
 		background-image: url(../img/bg-desc.jpg)
-		background-size: cover
 		background-position: 50% 50%
+		background-attachment: fixed
 
 	.page
 		&__inner
@@ -89,7 +90,7 @@
 				bottom: -2px
 			&[data-option-type="hair"]
 				min-height: 140px
-			&[data-option-type="chest"]
+			&[data-option-type="breast"]
 				min-height: 200px
 			&[data-option-type="ass"]
 				min-height: 210px
@@ -144,7 +145,7 @@
 			font-size: 30px
 			text-align: left
 		&__list
-			padding: 25px 0
+			padding-bottom: 25px
 		&__item
 			font-size: 18px
 			b
@@ -163,7 +164,7 @@
 			bottom: auto
 			left: auto
 			margin-top: 0
-			transform: translateY(-15px)
+			transform: translateY(-45px)
 		&.stop
 			.profile
 				&__about

@@ -218,7 +218,6 @@ button
 			background-size: contain
 			background-position: bottom right
 			background-repeat: no-repeat
-			display: none
 	&__footer
 		padding: 35px 15px
 		text-align: center
@@ -289,7 +288,6 @@ button
 			line-height: 50px
 			background-color: #2b0e1e
 			background-size: cover
-			cursor: pointer
 			font-family: $font-demi
 			color: #fff
 			width: 50px
@@ -332,7 +330,7 @@ button
 		font-family: $font-demi
 		font-size: 24px
 		font-weight: 400
-		margin: 0
+		margin: 0 0 20px
 		color: #fff
 		text-align: center
 		&-signSuccess
@@ -358,7 +356,7 @@ button
 				&-signSearching
 					display: none
 	&__list
-		padding: 20px 0
+		padding: 0 0 20px
 		border-bottom: 1px solid #ff9f31
 		margin-bottom: 15px
 		display: none
@@ -492,10 +490,10 @@ button
 				&--1
 					transform: scale(.9)
 				&--2
-					transform: scale(.85) translate(25px, 7px)
+					transform: scale(.85) translate(28px, 7px)
 					opacity: 1
 				&--3
-					transform: scale(.8) translate(50px, 15px)
+					transform: scale(.8) translate(56px, 15px)
 					opacity: 1
 
 .about
@@ -517,6 +515,9 @@ button
 			margin-left: 4px
 	&__label
 		display: none
+
+.map
+	display: none
 
 //ALWAYS END
 @import "media"
