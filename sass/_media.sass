@@ -5,6 +5,7 @@
 	body
 		background-image: url(../img/bg-desc.jpg)
 		background-size: cover
+		background-position: 50% 50%
 
 	.page
 		&__inner
@@ -25,6 +26,14 @@
 		&__app
 			max-width: 650px
 			background-color: transparent
+		&.results-has-shown
+			.page__inner
+				vertical-align: middle
+			.page__container
+				padding-top: 0
+
+	.app__result
+		padding: 15px
 
 	.header
 		position: fixed
@@ -55,6 +64,27 @@
 		&__group
 			background-image: linear-gradient(to top, rgba(#ff52b0, .2), transparent)
 			border-radius: 5px
+			display: table
+			table-layout: fixed
+			width: 100%
+			&-desc,
+			&-options
+				display: table-cell
+				vertical-align: middle
+				width: 50%
+				padding: 30px
+			&-desc
+				padding-right: 150px
+			&-options
+				text-align: right
+			&-label
+				font-size: 18px
+				color: #ff9f31
+				line-height: 1
+			&-current
+				display: block
+				font-size: 36px
+				line-height: 1
 			&::after
 				bottom: -2px
 			&[data-option-type="hair"]
@@ -67,3 +97,60 @@
 			width: 282px
 			height: 541px
 			margin-right: -131px
+			&::after
+				box-shadow: 0 0 150px 150px #fff
+				opacity: .2	
+
+	.result
+		background-color: transparent
+		border-radius: 5px
+		overflow: hidden
+		&__header,
+		&__statistics
+			background-image: linear-gradient(to bottom, rgba(#ff52b0, .4), rgba(#ff52b0, .2))
+		&__header
+			display: table
+			table-layout: fixed
+			width: 100%
+		&__choice,
+		&__geo
+			display: table-cell
+			vertical-align: middle
+			text-align: left
+		&__choice
+			padding: 20px 40px
+			width: 48%
+		&__geo
+			padding: 20px 40px 20px 0
+			font-size: 18px
+			line-height: 1
+			width: 52%
+			color: #9F7B8D
+			font-family: $font-demi
+			b
+				font-size: 36px
+				display: block
+				margin: 5px 0 0
+
+	.statistics
+		padding: 35px 35px 50px 48%
+		position: relative
+		&__profile
+			position: absolute
+			top: 35px
+			left: 55px
+		&__status
+			font-size: 32px
+		&__list
+			padding: 25px 0
+		&__item
+			font-size: 18px
+			b
+				font-size: 21px
+			&+&
+				margin-top: 10px
+		&__result
+			text-align: left
+			margin-bottom: 30px
+		&__distance
+			margin-top: 10px
