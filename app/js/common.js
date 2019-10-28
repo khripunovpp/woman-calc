@@ -20,6 +20,7 @@ var App = {
         _t['state'] = op;
 
         _t['searchBtn'] = $('.js-search');
+        _t['hasClick'] = false;
 
         _t._updateChoice();
 
@@ -28,10 +29,12 @@ var App = {
                 vatinatValue = $(event.target).attr('data-variant-value');
             _t.state[vatinatType] = vatinatValue;
             _t._updateChoice();
+            if(!_t.hasClick) $('.choice').addClass('has-click')
         });
 
         _t.searchBtn.on('click', function(event) {
             event.preventDefault();
+            if (Object.keys(_t.state).length < 3) return;
             $('.app__choice').hide();
             $('.page').addClass('results-has-shown')
             $('.app__result').show();
@@ -62,13 +65,14 @@ var App = {
                 resultItem.html(_t.state[type]);
             }
         }
-        _t._cangeImage();
+
+        Object.keys(_t.state).length === 3 && _t._cangeImage();
     },
     _cangeImage: function() {
         var _t = this;
 
         _t['imageUrlChoice'] = "img/choice/" + _t.state['hair'] + "-" + _t.state['breast'] + "-" + _t.state['ass'] + ".png";
-        _t['imageUrlResult'] = "img/result/brunette-l-l.jpg";
+        _t['imageUrlResult'] = "img/result/" + _t.state['hair'] + "-" + _t.state['breast'] + "-" + _t.state['ass'] + ".jpg";
 
         var previewCurrent = $('.choice__preview-current'),
             previewNext = $('.choice__preview-next');
